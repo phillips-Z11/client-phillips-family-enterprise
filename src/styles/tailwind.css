@@ -1,0 +1,396 @@
+/* ============================================================
+   PHILLIPS FAMILY ENTERPRISES — Tailwind v4 Design System
+   ============================================================
+   Main entry point for Tailwind CSS with PFE design tokens.
+   Includes light/dark theme support via .dark class.
+   ============================================================ */
+
+/* Google Fonts imports must come first */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap');
+
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+/* Dark mode variant */
+@custom-variant dark (&:is(.dark *));
+
+/* ============================================================
+   @theme — Tailwind v4 Design Tokens
+   ============================================================
+   These tokens generate utility classes like:
+   - bg-surface, text-fg, border-border
+   - font-display, font-sans
+   - text-display, text-h1, text-body
+   - rounded-sm, rounded-lg
+   - shadow-sm, shadow-lg
+   - ease-default, duration-fast
+   ============================================================ */
+
+@theme {
+  /* ---------- FONT FAMILIES ---------- */
+  --font-display: 'Cormorant Garamond', 'Hoefler Text', Georgia, serif;
+  --font-sans: 'Roboto', -apple-system, 'Segoe UI', system-ui, sans-serif;
+
+  /* ---------- FONT SIZES (with line-height) ---------- */
+  --text-display: clamp(48px, 6vw, 84px);
+  --text-display--line-height: 1.02;
+  --text-h1: clamp(36px, 4vw, 56px);
+  --text-h1--line-height: 1.06;
+  --text-h2: clamp(28px, 3vw, 40px);
+  --text-h2--line-height: 1.12;
+  --text-h3: 24px;
+  --text-h3--line-height: 1.25;
+  --text-h4: 19px;
+  --text-h4--line-height: 1.3;
+  --text-body-lg: 18px;
+  --text-body-lg--line-height: 1.6;
+  --text-body: 16px;
+  --text-body--line-height: 1.55;
+  --text-sm: 14px;
+  --text-sm--line-height: 1.5;
+  --text-caption: 12.5px;
+  --text-caption--line-height: 1.4;
+  --text-eyebrow: 11px;
+  --text-eyebrow--line-height: 1.2;
+
+  /* ---------- FONT WEIGHTS ---------- */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+
+  /* ---------- LETTER SPACING ---------- */
+  --tracking-tight: -0.01em;
+  --tracking-eyebrow: 0.16em;
+
+  /* ---------- PALETTE COLORS (static) ---------- */
+  /* Ink — deep blue scale */
+  --color-ink-900: #0A2C4E;
+  --color-ink-800: #0F3A63;
+  --color-ink-700: #15487A;
+  --color-ink-600: #1D5A93;
+  --color-ink-500: #2E6FAE;
+  --color-ink-400: #5A8AC0;
+
+  /* Blue — action colors */
+  --color-blue-700: #0F4C86;
+  --color-blue-600: #1763B6;
+  --color-blue-500: #2E84D6;
+  --color-blue-100: #E4F0FB;
+
+  /* Green — accent colors */
+  --color-green-700: #2C8742;
+  --color-green-600: #3DAE55;
+  --color-green-500: #58C06A;
+  --color-green-400: #7BD08A;
+  --color-green-300: #B4E6BD;
+  --color-green-100: #E9F8EC;
+  --color-green-bright: #8FE0A0;
+
+  /* Neutrals */
+  --color-white: #FFFFFF;
+  --color-paper: #F6F8FB;
+  --color-paper-2: #EEF2F7;
+  --color-line: #E2E8F0;
+  --color-line-strong: #CBD5E1;
+  --color-slate-700: #334155;
+  --color-slate-500: #64748B;
+  --color-slate-400: #94A3B8;
+  --color-ink-text: #102A45;
+
+  /* Utility colors */
+  --color-danger-600: #B4341F;
+  --color-danger-100: #FBE9E6;
+
+  /* ---------- SEMANTIC COLORS (theme-aware via CSS vars) ---------- */
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-fg: var(--fg);
+  --color-fg-muted: var(--fg-muted);
+  --color-fg-subtle: var(--fg-subtle);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-action: var(--action);
+  --color-action-hover: var(--action-hover);
+  --color-accent: var(--accent);
+  --color-accent-deep: var(--accent-deep);
+  --color-success: var(--success);
+  --color-danger: var(--danger);
+  --color-focus-ring: var(--focus-ring);
+
+  /* ---------- SPACING (4px base) ---------- */
+  --spacing-1: 4px;
+  --spacing-2: 8px;
+  --spacing-3: 12px;
+  --spacing-4: 16px;
+  --spacing-5: 24px;
+  --spacing-6: 32px;
+  --spacing-7: 48px;
+  --spacing-8: 64px;
+  --spacing-9: 96px;
+
+  /* ---------- BORDER RADIUS ---------- */
+  --radius-sm: 8px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+  --radius-pill: 999px;
+
+  /* ---------- SHADOWS ---------- */
+  --shadow-sm: 0 1px 2px rgba(14,42,71,0.06), 0 1px 3px rgba(14,42,71,0.05);
+  --shadow-md: 0 4px 12px rgba(14,42,71,0.08), 0 2px 4px rgba(14,42,71,0.05);
+  --shadow-lg: 0 18px 40px -12px rgba(14,42,71,0.20), 0 6px 14px rgba(14,42,71,0.08);
+  --shadow-green: 0 8px 24px -6px rgba(88,192,106,0.32);
+
+  /* ---------- TRANSITIONS / EASING ---------- */
+  --ease-default: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* ---------- DURATIONS ---------- */
+  --duration-fast: 140ms;
+  --duration-default: 220ms;
+  --duration-slow: 360ms;
+}
+
+/* ============================================================
+   :root — Light Mode CSS Variables
+   ============================================================ */
+
+:root {
+  /* Semantic colors — light mode values */
+  --bg: #F6F8FB;
+  --surface: #FFFFFF;
+  --surface-2: #EEF2F7;
+  --surface-dark: #0F3A63;
+
+  --fg: #102A45;
+  --fg-muted: #64748B;
+  --fg-subtle: #94A3B8;
+  --fg-on-dark: #EAF1F8;
+  --fg-on-dark-muted: #9FB6CC;
+
+  --border: #E2E8F0;
+  --border-strong: #CBD5E1;
+
+  --action: #1763B6;
+  --action-hover: #0F4C86;
+  --accent: #58C06A;
+  --accent-deep: #2C8742;
+  --success: #3DAE55;
+  --danger: #B4341F;
+
+  --focus-ring: color-mix(in srgb, #1763B6 38%, transparent);
+
+  /* Legacy shadcn compatibility vars (maps to PFE tokens) */
+  --background: var(--bg);
+  --foreground: var(--fg);
+  --card: var(--surface);
+  --card-foreground: var(--fg);
+  --popover: var(--surface);
+  --popover-foreground: var(--fg);
+  --primary: var(--action);
+  --primary-foreground: #FFFFFF;
+  --secondary: var(--surface-2);
+  --secondary-foreground: var(--fg);
+  --muted: var(--surface-2);
+  --muted-foreground: var(--fg-muted);
+  --accent-foreground: var(--fg);
+  --destructive: var(--danger);
+  --input: var(--border);
+  --ring: var(--focus-ring);
+  --radius: 10px;
+
+  /* Sidebar (shadcn compatibility) */
+  --sidebar: var(--surface);
+  --sidebar-foreground: var(--fg);
+  --sidebar-primary: var(--action);
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: var(--surface-2);
+  --sidebar-accent-foreground: var(--fg);
+  --sidebar-border: var(--border);
+  --sidebar-ring: var(--focus-ring);
+
+  /* Chart colors (shadcn compatibility) */
+  --chart-1: #1763B6;
+  --chart-2: #58C06A;
+  --chart-3: #0F3A63;
+  --chart-4: #7BD08A;
+  --chart-5: #2E84D6;
+}
+
+/* ============================================================
+   .dark — Dark Mode CSS Variables
+   ============================================================ */
+
+.dark {
+  /* Semantic colors — dark mode values */
+  --bg: #0A2C4E;
+  --surface: #0F3A63;
+  --surface-2: #15487A;
+  --surface-dark: #0F3A63;
+
+  --fg: #EAF1F8;
+  --fg-muted: #9FB6CC;
+  --fg-subtle: #6B8299;
+  --fg-on-dark: #EAF1F8;
+  --fg-on-dark-muted: #9FB6CC;
+
+  --border: rgba(255, 255, 255, 0.10);
+  --border-strong: rgba(255, 255, 255, 0.18);
+
+  --action: #2E84D6;
+  --action-hover: #1763B6;
+  --accent: #8FE0A0;
+  --accent-deep: #8FE0A0;
+  --success: #58C06A;
+  --danger: #E05A4A;
+
+  --focus-ring: color-mix(in srgb, #2E84D6 38%, transparent);
+
+  /* Legacy shadcn compatibility vars (dark mode) */
+  --background: var(--bg);
+  --foreground: var(--fg);
+  --card: var(--surface);
+  --card-foreground: var(--fg);
+  --popover: var(--surface);
+  --popover-foreground: var(--fg);
+  --primary: var(--action);
+  --primary-foreground: #FFFFFF;
+  --secondary: var(--surface-2);
+  --secondary-foreground: var(--fg);
+  --muted: var(--surface-2);
+  --muted-foreground: var(--fg-muted);
+  --accent-foreground: var(--fg);
+  --destructive: var(--danger);
+  --input: var(--border-strong);
+  --ring: var(--focus-ring);
+
+  /* Sidebar (dark mode) */
+  --sidebar: var(--surface);
+  --sidebar-foreground: var(--fg);
+  --sidebar-primary: var(--action);
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: var(--surface-2);
+  --sidebar-accent-foreground: var(--fg);
+  --sidebar-border: var(--border);
+  --sidebar-ring: var(--focus-ring);
+
+  /* Chart colors (dark mode) */
+  --chart-1: #2E84D6;
+  --chart-2: #8FE0A0;
+  --chart-3: #5A8AC0;
+  --chart-4: #B4E6BD;
+  --chart-5: #58C06A;
+}
+
+/* ============================================================
+   @layer base — Base Element Styles
+   ============================================================ */
+
+@layer base {
+  * {
+    @apply border-border;
+    outline-color: var(--focus-ring);
+  }
+
+  html {
+    @apply font-sans antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply bg-bg text-fg text-body;
+  }
+
+  /* Headings — display font for h1/h2, sans for h3/h4 */
+  h1, .h1 {
+    @apply font-display text-h1 font-semibold tracking-tight text-ink-800;
+    margin: 0;
+  }
+
+  h2, .h2 {
+    @apply font-display text-h2 font-semibold text-ink-800;
+    margin: 0;
+  }
+
+  h3, .h3 {
+    @apply font-sans text-h3 font-bold tracking-tight text-ink-800;
+    margin: 0;
+  }
+
+  h4, .h4 {
+    @apply font-sans text-h4 font-bold text-ink-800;
+    margin: 0;
+  }
+
+  /* Dark mode heading overrides */
+  .dark h1, .dark .h1,
+  .dark h2, .dark .h2,
+  .dark h3, .dark .h3,
+  .dark h4, .dark .h4 {
+    @apply text-fg;
+  }
+
+  /* Links */
+  a {
+    @apply text-action no-underline;
+    transition: color var(--duration-fast) var(--ease-default);
+  }
+
+  a:hover {
+    @apply text-action-hover;
+  }
+
+  /* Paragraphs */
+  p {
+    margin: 0 0 1em;
+  }
+}
+
+/* ============================================================
+   @layer components — Reusable Component Styles
+   ============================================================ */
+
+@layer components {
+  /* Display heading (larger than h1) */
+  .display {
+    @apply font-display text-display font-medium tracking-tight text-ink-800;
+    margin: 0;
+  }
+
+  .dark .display {
+    @apply text-fg;
+  }
+
+  /* Eyebrow / overline text */
+  .eyebrow {
+    @apply font-sans text-eyebrow font-bold uppercase text-accent-deep;
+    letter-spacing: 0.16em;
+  }
+
+  .dark .eyebrow {
+    @apply text-accent;
+  }
+
+  /* Body text variants */
+  .body-lg {
+    @apply text-body-lg;
+  }
+
+  .caption {
+    @apply text-caption text-fg-muted;
+  }
+
+  .muted {
+    @apply text-fg-muted;
+  }
+
+  /* Focus ring utility */
+  .focus-ring {
+    @apply outline-none ring-2 ring-focus-ring ring-offset-2 ring-offset-surface;
+  }
+}
