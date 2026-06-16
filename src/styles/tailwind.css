@@ -300,6 +300,14 @@
   html {
     @apply font-sans antialiased;
     text-rendering: optimizeLegibility;
+    /* Match navbar background on mobile for iOS safe-area consistency */
+    @apply bg-paper;
+  }
+
+  @media (min-width: 640px) {
+    html {
+      @apply bg-bg;
+    }
   }
 
   body {
