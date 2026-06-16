@@ -7,14 +7,14 @@ export function Navbar() {
         
         
         {/* Logo area */}
-        <a href="#" className="flex shrink-0 items-center gap-[11px] no-underline">
-          <img src="/logo-crest.png" alt="Phillips Family Enterprises" className="h-[38px] w-auto" />
-          <div className="h-7 w-px bg-line-strong" />
+        <a href="#" className="flex shrink-0 items-center gap-1.5 sm:gap-[11px] no-underline">
+          <img src="/logo-crest.png" alt="Phillips Family Enterprises" className="h-[22px] sm:h-[38px] w-auto" />
+          <div className="h-4 sm:h-7 w-px bg-line-strong" />
           <div className="flex flex-col leading-none">
-            <span className="font-display text-[17.5px] font-semibold tracking-[0.02em] text-ink-800 whitespace-nowrap">
+            <span className="font-display text-[10px] sm:text-[17.5px] font-semibold tracking-[0.02em] text-ink-800 whitespace-nowrap">
               Phillips Family Enterprises
             </span>
-            <span className="mt-1 text-[9px] font-extrabold uppercase tracking-[0.22em] text-green-700">
+            <span className="mt-0.5 sm:mt-1 text-[6px] sm:text-[9px] font-extrabold uppercase tracking-[0.22em] text-green-700">
               Real Estate Investors
             </span>
           </div>
