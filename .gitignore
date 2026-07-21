@@ -25,3 +25,4 @@ dist-ssr
 
 standalone.html
 pfe
+.env

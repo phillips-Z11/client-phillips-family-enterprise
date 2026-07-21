@@ -9,7 +9,7 @@ interface TestimonialCardProps {
 
 function TestimonialCard({ quote, name, location, initial }: TestimonialCardProps) {
   return (
-    <div className="flex flex-col rounded-lg border border-line bg-white p-7 shadow-md">
+    <div className="flex flex-col rounded-lg border border-line bg-white px-7 py-7 shadow-md">
       {/* Stars */}
       <div className="mb-4 flex gap-0.5 text-green-500">
         {[...Array(5)].map((_, i) => (
@@ -39,45 +39,51 @@ function TestimonialCard({ quote, name, location, initial }: TestimonialCardProp
 const testimonials: TestimonialCardProps[] = [
   {
     quote:
-      "Ziaire called the next morning, gave us a fair number, and we closed in eleven days. No repairs, no agents, no stress — exactly what he promised.",
-    name: "Marcus & Dana Reed",
+      `I needed to sell my property quickly and didn’t want to deal with repairs, 
+      showings, or waiting months for a buyer. Phillips Family Realty made the process simple, 
+      explained everything clearly, and closed on my timeline. I highly recommend them!`,
+    name: "William R",
     location: "Hockessin, DE",
-    initial: "M",
+    initial: "WR",
   },
   {
     quote:
-      "I inherited a house that needed a lot of work. Phillips Family Enterprises bought it as-is and let me pick the closing date. Honest people, start to finish.",
-    name: "Teresa Okafor",
+    `I was facing a challenging financial situation and needed a solution quickly. Phillips 
+    Family Realty worked with me every step of the way, gave me options, and helped me move 
+    forward with confidence.`,
+    name: "Terrell B",
     location: "Wilmington, DE",
-    initial: "T",
+    initial: "TB",
   },
   {
     quote:
-      "After two failed listings, I was done with showings. Ziaire made it simple — cash offer, clear paperwork, and money in hand on my schedule. Highly recommend.",
-    name: "James Whitfield",
+      `From our first conversation, I felt like I was treated with respect and honesty. 
+      They gave me a fair offer, handled all the details, and made selling my home stress-free. 
+      The entire experience was much easier than I expected.`,
+    name: "Lillian K",
     location: "Newark, DE",
-    initial: "J",
+    initial: "LK",
   },
 ]
 
 export function Testimonials() {
   return (
     <section id="reviews" className="bg-paper-2 py-24 max-md:py-16">
-      <div className="mx-auto max-w-[1180px] px-8 max-sm:px-5">
+      <div className="mx-auto max-w-295 px-4 max-sm:px-5">
         {/* Section Header */}
-        <div className="mx-auto mb-14 max-w-[700px] text-center">
+        <div className="mx-auto mb-14 max-w-175 text-center">
           <div className="mb-4 inline-flex items-center gap-2.5 text-eyebrow font-extrabold uppercase tracking-eyebrow text-green-700">
-            <span className="inline-block h-[1.5px] w-[22px] rounded-sm bg-green-500" />
+            <span className="inline-block h-[1.5px] w-5.5 rounded-sm bg-green-500" />
             <span className="text-[13px] text-green-500">★</span>
             What Sellers Say
           </div>
-          <h2 className="font-display text-h1 font-medium tracking-tight text-ink-800 [text-wrap:balance]">
+          <h2 className="font-display text-h1 font-medium tracking-tight text-ink-800 text-balance">
             Trusted by families like <em className="italic text-blue-600">yours</em>.
           </h2>
         </div>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {testimonials.map((testimonial) => (
             <TestimonialCard key={testimonial.name} {...testimonial} />
           ))}

@@ -3,19 +3,19 @@ import { Phone } from "lucide-react"
 export function Navbar() {
   return (
     <header className="sticky top-0 z-40 border-b border-line bg-paper/90 backdrop-blur-[14px]">
-      <nav className="flex h-[72px] items-center justify-between gap-6 px-5 w-full">
+      <nav className="flex h-18 items-center justify-between gap-6 px-5 w-full">
         
         
         {/* Logo area */}
-        <a href="#" className="flex shrink-0 items-center gap-1.5 sm:gap-[11px] no-underline">
-          <img src="/logo-crest.png" alt="Phillips Family Enterprises" className="h-[22px] sm:h-[38px] w-auto" />
-          <div className="h-4 sm:h-7 w-px bg-line-strong" />
+        <a href="#" className="flex shrink-0 items-center gap-1.5 sm:gap-2.75 no-underline">
+          <img src="/logo-crest.png" alt="Phillips Family Enterprises" className="h-[34px] sm:h-[38px] w-auto" />
+          <div className="h-6 sm:h-7 w-px bg-line-strong" />
           <div className="flex flex-col leading-none">
-            <span className="font-display text-[10px] sm:text-[17.5px] font-semibold tracking-[0.02em] text-ink-800 whitespace-nowrap">
-              Phillips Family Enterprises
+            <span className="font-display text-sm sm:text-md uppercase font-extrabold tracking-[0.02em] text-ink-800 whitespace-nowrap">
+              Phillips
             </span>
-            <span className="mt-0.5 sm:mt-1 text-[6px] sm:text-[9px] font-extrabold uppercase tracking-[0.22em] text-green-700">
-              Real Estate Investors
+            <span className="mt-0.5 sm:mt-1 text-[7px] sm:text-[9px] font-thin uppercase tracking-[0.22em] text-green-700">
+              Family Enterprises
             </span>
           </div>
         </a>
@@ -32,7 +32,7 @@ export function Navbar() {
         <div className="flex items-center">
           <a href="tel:+15550000000" className="inline-flex items-center gap-1 sm:gap-[7px] rounded-md bg-green-600 px-2.5 sm:px-5 py-2 sm:py-2.5 text-[10px] sm:text-sm font-semibold text-white shadow-sm hover:bg-green-700 hover:shadow-md no-underline">
             <Phone className="size-3 sm:size-4" />
-            (555) 000-0000
+            (410) 996-4975
           </a>
         </div>
       </nav>
