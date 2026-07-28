@@ -10,9 +10,9 @@ export function Footer() {
           <div>
             <div className="mb-4 flex items-center gap-3">
               <img
-                src="/logo-mark.png"
+                src="/logo-crest.png"
                 alt="Phillips Family Enterprises"
-                className="h-10 brightness-0 invert"
+                className="h-14 w-auto"
               />
               <div>
                 <div className="font-display text-lg font-semibold leading-none text-white">

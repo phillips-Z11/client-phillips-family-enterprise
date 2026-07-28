@@ -302,6 +302,13 @@
     text-rendering: optimizeLegibility;
     /* Match navbar background on mobile for iOS safe-area consistency */
     @apply bg-paper;
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
   }
 
   @media (min-width: 640px) {
