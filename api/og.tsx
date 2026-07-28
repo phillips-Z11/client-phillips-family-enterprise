@@ -11,8 +11,6 @@ const HEADLINE_LINE_1 = 'Sell your house fast.';
 const HEADLINE_LINE_2_PREFIX = 'Get paid in';
 const HEADLINE_ACCENT = 'cash.';
 const SUBTEXT = 'No repairs. No agent fees. No waiting on financing.';
-const TRUST_ITEMS = ['Close in 7–14 days', 'No repairs needed', 'Cash offer in 24 hours'];
-const PHONE = '(410) 996-4975';
 
 // Cormorant Garamond weight (500) has no italic axis at the
 // google-generated font url unless it's in the imports, so we mirror the
@@ -44,8 +42,8 @@ export default async function handler(request: Request) {
   const cormorantBoldText = BRAND_NAME;
   const cormorantSemiboldText = `${HEADLINE_LINE_1} ${HEADLINE_LINE_2_PREFIX}`;
   const cormorantItalicText = HEADLINE_ACCENT;
-  const robotoRegularText = [BRAND_SUB, SUBTEXT, ...TRUST_ITEMS, '•'].join(' ');
-  const robotoBoldText = [YEARS_BADGE, PHONE].join(' ');
+  const robotoRegularText = [BRAND_SUB, SUBTEXT].join(' ');
+  const robotoBoldText = YEARS_BADGE;
 
   const [logoData, cormorantBold, cormorantSemibold, cormorantItalic, robotoRegular, robotoBold] =
     await Promise.all([
@@ -79,26 +77,15 @@ export default async function handler(request: Request) {
         {/* Brand row */}
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
           <div style={{ display: 'flex', alignItems: 'center' }}>
-            <div
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                background: '#F6F8FB',
-                borderRadius: 14,
-                padding: '10px 16px',
-              }}
-            >
-              <img src={logoSrc} width={72} height={32} style={{ objectFit: 'contain' }} />
-            </div>
-            <div style={{ display: 'flex', width: 1, height: 44, margin: '0 20px', background: 'rgba(255,255,255,0.25)' }} />
+            <img src={logoSrc} width={220} height={98} style={{ objectFit: 'contain' }} />
+            <div style={{ display: 'flex', width: 1, height: 90, margin: '0 20px', background: 'rgba(255,255,255,0.25)' }} />
             <div style={{ display: 'flex', flexDirection: 'column' }}>
               <span
                 style={{
                   fontFamily: 'Cormorant Garamond',
                   fontWeight: 700,
-                  fontSize: 26,
-                  letterSpacing: 2,
+                  fontSize: 42,
+                  letterSpacing: 3,
                   textTransform: 'uppercase',
                   color: '#FFFFFF',
                 }}
@@ -107,12 +94,12 @@ export default async function handler(request: Request) {
               </span>
               <span
                 style={{
-                  fontSize: 12,
+                  fontSize: 17,
                   fontWeight: 400,
-                  letterSpacing: 4,
+                  letterSpacing: 6,
                   textTransform: 'uppercase',
                   color: '#8FE0A0',
-                  marginTop: 4,
+                  marginTop: 8,
                 }}
               >
                 {BRAND_SUB}
@@ -173,42 +160,6 @@ export default async function handler(request: Request) {
             }}
           >
             {SUBTEXT}
-          </div>
-        </div>
-
-        {/* Trust row + phone */}
-        <div
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-            paddingTop: 28,
-            borderTop: '1px solid rgba(255,255,255,0.16)',
-          }}
-        >
-          <div style={{ display: 'flex', alignItems: 'center', gap: 22, fontFamily: 'Roboto', fontWeight: 400, fontSize: 19, color: 'rgba(255,255,255,0.9)' }}>
-            {TRUST_ITEMS.map((item, i) => (
-              <div key={item} style={{ display: 'flex', alignItems: 'center' }}>
-                {i > 0 && <span style={{ display: 'flex', color: '#8FE0A0', marginRight: 22 }}>•</span>}
-                <span style={{ display: 'flex' }}>{item}</span>
-              </div>
-            ))}
-          </div>
-
-          <div
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              padding: '13px 26px',
-              borderRadius: 10,
-              background: '#3DAE55',
-              color: '#FFFFFF',
-              fontFamily: 'Roboto',
-              fontWeight: 700,
-              fontSize: 21,
-            }}
-          >
-            {PHONE}
           </div>
         </div>
       </div>
