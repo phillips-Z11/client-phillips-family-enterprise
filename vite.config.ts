@@ -13,7 +13,7 @@ function vercelOgDevMiddleware(): Plugin {
     configureServer(server) {
       server.middlewares.use("/api/og", async (req, res) => {
         try {
-          const { default: handler } = await server.ssrLoadModule("/src/api/og.tsx")
+          const { default: handler } = await server.ssrLoadModule("/api/og.tsx")
           const request = new Request(new URL(req.url ?? "/", `http://${req.headers.host}`))
           const response: Response = await handler(request)
 
