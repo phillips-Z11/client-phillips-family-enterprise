@@ -29,7 +29,7 @@ export function HeroForm() {
       {!isSuccess ? (
         <form onSubmit={handleSubmit}>
           <p className="mb-4 text-center font-display text-[19px] font-semibold tracking-tight text-ink-800 sm:mb-5 sm:text-[21px]">
-            Get your free, no-obligation cash offer
+            Get your free cash offer today
           </p>
 
           {/* Name Row */}
