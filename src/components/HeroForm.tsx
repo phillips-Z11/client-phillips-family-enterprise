@@ -25,17 +25,17 @@ export function HeroForm() {
   }
 
   return (
-    <div className="w-full rounded-xl bg-white p-7 shadow-[0_28px_64px_rgba(8,24,50,0.38),0_8px_20px_rgba(8,24,50,0.20),0_0_0_1px_rgba(255,255,255,0.08)]">
+    <div className="w-full rounded-xl bg-white p-6 shadow-[0_28px_64px_rgba(8,24,50,0.38),0_8px_20px_rgba(8,24,50,0.20),0_0_0_1px_rgba(255,255,255,0.08)] sm:p-7">
       {!isSuccess ? (
         <form onSubmit={handleSubmit}>
-          <p className="mb-5 text-center font-display text-[21px] font-semibold tracking-tight text-ink-800">
+          <p className="mb-4 text-center font-display text-[19px] font-semibold tracking-tight text-ink-800 sm:mb-5 sm:text-[21px]">
             Get your free, no-obligation cash offer
           </p>
 
           {/* Name Row */}
-          <div className="mb-3 grid grid-cols-1 gap-3 sm:grid-cols-2">
+          <div className="mb-2.5 grid grid-cols-2 gap-2 sm:mb-3 sm:gap-3">
             <div>
-              <label className="mb-1.5 block text-left text-xs font-semibold tracking-[0.01em] text-slate-700">
+              <label className="mb-1 block text-left text-[11px] font-semibold tracking-[0.01em] text-slate-700 sm:mb-1.5 sm:text-xs">
                 First name
               </label>
               <Input
@@ -50,7 +50,7 @@ export function HeroForm() {
               />
             </div>
             <div>
-              <label className="mb-1.5 block text-left text-xs font-semibold tracking-[0.01em] text-slate-700">
+              <label className="mb-1 block text-left text-[11px] font-semibold tracking-[0.01em] text-slate-700 sm:mb-1.5 sm:text-xs">
                 Last name
               </label>
               <Input
@@ -67,8 +67,8 @@ export function HeroForm() {
           </div>
 
           {/* Property Address */}
-          <div className="mb-3">
-            <label className="mb-1.5 block text-left text-xs font-semibold tracking-[0.01em] text-slate-700">
+          <div className="mb-2.5 sm:mb-3">
+            <label className="mb-1 block text-left text-[11px] font-semibold tracking-[0.01em] text-slate-700 sm:mb-1.5 sm:text-xs">
               Property address
             </label>
             <Input
@@ -84,9 +84,9 @@ export function HeroForm() {
           </div>
 
           {/* Phone & Email row */}
-          <div className="mb-3 grid grid-cols-1 gap-3 sm:grid-cols-2">
+          <div className="mb-2.5 grid grid-cols-1 gap-2 sm:mb-3 sm:grid-cols-2 sm:gap-3">
             <div>
-              <label className="mb-1.5 block text-left text-xs font-semibold tracking-[0.01em] text-slate-700">
+              <label className="mb-1 block text-left text-[11px] font-semibold tracking-[0.01em] text-slate-700 sm:mb-1.5 sm:text-xs">
                 Phone
               </label>
               <Input
@@ -101,7 +101,7 @@ export function HeroForm() {
               />
             </div>
             <div>
-              <label className="mb-1.5 block text-left text-xs font-semibold tracking-[0.01em] text-slate-700">
+              <label className="mb-1 block text-left text-[11px] font-semibold tracking-[0.01em] text-slate-700 sm:mb-1.5 sm:text-xs">
                 Email
               </label>
               <Input
@@ -129,7 +129,7 @@ export function HeroForm() {
             type="submit"
             disabled={isLoading}
             className={cn(
-              "mt-4 flex w-full items-center justify-center gap-2.5 rounded-md bg-green-600 px-6 py-4 font-sans text-base font-bold text-white",
+              "mt-3 flex w-full items-center justify-center gap-2.5 rounded-md bg-green-600 px-5 py-3.5 font-sans text-[15px] font-bold text-white sm:mt-4 sm:px-6 sm:py-4 sm:text-base",
               "shadow-[0_4px_18px_rgba(61,174,85,0.28)]",
               "transition-all duration-default ease-default",
               "hover:bg-green-700 hover:shadow-[0_6px_22px_rgba(61,174,85,0.40)]",
@@ -140,18 +140,18 @@ export function HeroForm() {
             {isLoading ? (
               <>
                 Submitting
-                <Loader2 className="size-[18px] animate-spin" />
+                <Loader2 className="size-4 animate-spin sm:size-[18px]" />
               </>
             ) : (
               <>
                 Get my cash offer
-                <ArrowRight className="size-[18px]" />
+                <ArrowRight className="size-4 sm:size-[18px]" />
               </>
             )}
           </button>
 
           {/* Privacy note */}
-          <div className="mt-3 flex items-center justify-center gap-1.5 text-[11.5px] font-medium text-slate-400">
+          <div className="mt-2.5 flex items-center justify-center gap-1.5 text-[10.5px] font-medium text-slate-400 sm:mt-3 sm:text-[11.5px]">
             <ShieldCheck className="size-3 text-green-600" />
             Your information is private and never shared. No obligation.
           </div>

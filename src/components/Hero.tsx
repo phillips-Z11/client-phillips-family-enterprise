@@ -22,7 +22,7 @@ export function Hero() {
       />
 
       {/* Content */}
-      <div className="relative z-10 flex w-full max-w-[660px] flex-col items-center px-6 py-14 text-center md:py-16">
+      <div className="relative z-10 flex w-full max-w-[660px] flex-col items-center px-6 py-10 text-center sm:py-14 md:py-16">
         {/* Eyebrow */}
         <div className="mb-5 inline-flex items-center gap-2.5 text-eyebrow font-extrabold uppercase tracking-eyebrow text-green-bright [text-shadow:0_1px_8px_rgba(8,24,50,0.55)]">
           <span className="inline-block h-[1.5px] w-[22px] rounded-sm bg-green-500" />
@@ -32,14 +32,14 @@ export function Hero() {
         </div>
 
         {/* Headline */}
-        <h1 className="mb-4 font-display text-display font-medium tracking-tight text-white [text-shadow:0_2px_24px_rgba(8,24,50,0.45),0_1px_3px_rgba(8,24,50,0.30)] [text-wrap:balance]">
+        <h1 className="mb-3 font-display text-display font-medium tracking-tight text-white [text-shadow:0_2px_24px_rgba(8,24,50,0.45),0_1px_3px_rgba(8,24,50,0.30)] [text-wrap:balance] sm:mb-4">
           <em className="no-wrap">Sell your house fast. </em>
           <br />
           Get paid in <em className="italic text-[#86D898]">cash</em>.
         </h1>
 
         {/* Subtext */}
-        <p className="mb-10 max-w-[480px] text-body-lg text-white/70 [text-shadow:0_1px_12px_rgba(8,24,50,0.50)]">
+        <p className="mb-8 max-w-[480px] text-body-lg text-white/70 [text-shadow:0_1px_12px_rgba(8,24,50,0.50)] sm:mb-10">
           No repairs. No agent fees. No waiting on financing.
         </p>
 
