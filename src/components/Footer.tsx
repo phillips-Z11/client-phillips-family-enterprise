@@ -102,17 +102,17 @@ export function Footer() {
             <div className="flex flex-col gap-2.5">
               <a
                 href="tel:+15550000000"
-                className="flex items-center gap-2.5 text-sm font-medium text-[var(--fg-on-dark-muted)] transition-colors hover:text-white"
+                className="flex items-center gap-2.5 text-sm font-medium text-(--fg-on-dark-muted) transition-colors hover:text-white"
               >
                 <Phone className="size-4 flex-none text-green-bright" />
-                (555) 000-0000
+                (410) 996-4975
               </a>
               <a
                 href="mailto:hello@phillipsfamilyenterprises.com"
-                className="flex items-center gap-2.5 text-sm font-medium text-[var(--fg-on-dark-muted)] transition-colors hover:text-white"
+                className="flex items-center gap-2.5 text-sm font-medium text-(--fg-on-dark-muted) transition-colors hover:text-white"
               >
                 <Mail className="size-4 flex-none text-green-bright" />
-                hello@phillipsfamilyenterprises.com
+                zphillips@phillipsfamilyrealty.com
               </a>
               <span className="flex items-center gap-2.5 text-sm font-medium">
                 <Clock className="size-4 flex-none text-green-bright" />
@@ -128,13 +128,13 @@ export function Footer() {
           <div className="flex gap-5">
             <a
               href="#"
-              className="text-[var(--fg-on-dark-muted)] transition-colors hover:text-white"
+              className="text-(--fg-on-dark-muted) transition-colors hover:text-white"
             >
               Privacy Policy
             </a>
             <a
               href="#"
-              className="text-[var(--fg-on-dark-muted)] transition-colors hover:text-white"
+              className="text-(--fg-on-dark-muted) transition-colors hover:text-white"
             >
               Terms of Service
             </a>
