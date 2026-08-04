@@ -101,7 +101,7 @@ export function Footer() {
             </h4>
             <div className="flex flex-col gap-2.5">
               <a
-                href="tel:+15550000000"
+                href="tel:+14109964975"
                 className="flex items-center gap-2.5 text-sm font-medium text-(--fg-on-dark-muted) transition-colors hover:text-white"
               >
                 <Phone className="size-4 flex-none text-green-bright" />
