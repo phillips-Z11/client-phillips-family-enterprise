@@ -30,7 +30,7 @@ export function Navbar() {
 
         {/* Right side */}
         <div className="flex items-center">
-          <a href="tel:+15550000000" className="inline-flex items-center gap-1 sm:gap-[7px] rounded-md bg-green-600 px-2.5 sm:px-5 py-2 sm:py-2.5 text-[10px] sm:text-sm font-semibold text-white shadow-sm hover:bg-green-700 hover:shadow-md no-underline">
+          <a href="tel:+14109964975" className="inline-flex items-center gap-1 sm:gap-[7px] rounded-md bg-green-600 px-2.5 sm:px-5 py-2 sm:py-2.5 text-[10px] sm:text-sm font-semibold text-white shadow-sm hover:bg-green-700 hover:shadow-md no-underline">
             <Phone className="size-3 sm:size-4" />
             (410) 996-4975
           </a>

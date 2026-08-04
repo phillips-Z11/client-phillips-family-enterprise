@@ -2,8 +2,8 @@ import { Phone, Mail, Clock } from "lucide-react"
 
 export function Footer() {
   return (
-    <footer className="bg-ink-900 px-8 pb-9 pt-16 text-[var(--fg-on-dark-muted)] max-sm:px-5">
-      <div className="mx-auto max-w-[1180px]">
+    <footer className="bg-ink-900 px-8 pb-9 pt-16 text-(--fg-on-dark-muted) max-sm:px-5">
+      <div className="mx-auto max-w-295">
         {/* Footer Grid */}
         <div className="mb-12 grid grid-cols-1 gap-9 sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1.2fr]">
           {/* Brand Column */}
@@ -23,7 +23,7 @@ export function Footer() {
                 </div>
               </div>
             </div>
-            <p className="max-w-[300px] text-sm leading-relaxed">
+            <p className="max-w-75 text-sm leading-relaxed">
               Fast, fair, hassle-free cash offers for homeowners in any situation — and curated
               investment opportunities for our network of cash buyers. A family operator you can
               trust.
@@ -36,25 +36,25 @@ export function Footer() {
             <nav className="flex flex-col gap-2.5">
               <a
                 href="#about"
-                className="text-sm font-medium text-[var(--fg-on-dark-muted)] transition-colors hover:text-white"
+                className="text-sm font-medium text-(--fg-on-dark-muted) transition-colors hover:text-white"
               >
                 About Us
               </a>
               <a
                 href="#services"
-                className="text-sm font-medium text-[var(--fg-on-dark-muted)] transition-colors hover:text-white"
+                className="text-sm font-medium text-(--fg-on-dark-muted) transition-colors hover:text-white"
               >
                 How It Works
               </a>
               <a
                 href="#meet-ziaire"
-                className="text-sm font-medium text-[var(--fg-on-dark-muted)] transition-colors hover:text-white"
+                className="text-sm font-medium text-(--fg-on-dark-muted) transition-colors hover:text-white"
               >
                 Meet Ziaire
               </a>
               <a
                 href="#reviews"
-                className="text-sm font-medium text-[var(--fg-on-dark-muted)] transition-colors hover:text-white"
+                className="text-sm font-medium text-(--fg-on-dark-muted) transition-colors hover:text-white"
               >
                 Reviews
               </a>
@@ -69,25 +69,25 @@ export function Footer() {
             <nav className="flex flex-col gap-2.5">
               <a
                 href="#"
-                className="text-sm font-medium text-[var(--fg-on-dark-muted)] transition-colors hover:text-white"
+                className="text-sm font-medium text-(--fg-on-dark-muted) transition-colors hover:text-white"
               >
                 Sell Your House
               </a>
               <a
                 href="#"
-                className="text-sm font-medium text-[var(--fg-on-dark-muted)] transition-colors hover:text-white"
+                className="text-sm font-medium text-(--fg-on-dark-muted) transition-colors hover:text-white"
               >
                 Cash Offers
               </a>
               <a
                 href="#"
-                className="text-sm font-medium text-[var(--fg-on-dark-muted)] transition-colors hover:text-white"
+                className="text-sm font-medium text-(--fg-on-dark-muted) transition-colors hover:text-white"
               >
                 Sell As-Is
               </a>
               <a
                 href="#"
-                className="text-sm font-medium text-[var(--fg-on-dark-muted)] transition-colors hover:text-white"
+                className="text-sm font-medium text-(--fg-on-dark-muted) transition-colors hover:text-white"
               >
                 Investment Properties
               </a>
